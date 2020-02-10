@@ -69,10 +69,11 @@ namespace CALCULATORLMAO
             }   
             if (ans == "subtract")
             {
-              invoke.
+             
             }
             // add an if else statement for subtract.
-            //OR DO A SWITCH STATEMENT? FUNKY TIME BABY
+            //im not sure why but i cant call subtraction() but i'll keep fucking w/ it in visual studio til it works haha
+            //addition should work as far as i know, it worked last i tested it
         }
     }
 }
