@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CALCULATORLMAO
+{
+    public class Program //make sure you have the else statement for all the shits haha
+    {
+        public static int result;
+        public static string ans;
+
+        public static int Add()
+        {
+            Console.WriteLine("are you sure?" +
+                 "type in yes to confirm, or type no to exit.");
+            string ans = Console.ReadLine();
+            if (ans == "yes")
+            {
+                Console.WriteLine("x =");
+                int x = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("y =");
+                int y = Convert.ToInt32(Console.ReadLine());
+
+                int sum = x + y;
+                Console.WriteLine("result: {0}", sum);
+                result = sum;
+                return result;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+            public class subtraction { 
+            public static int Subtract() //WHY WONT IT WORK [KILLS MYSELF]
+                {
+                    Console.WriteLine("are you sure?" +
+                    "type yes to confirm, or type no to exit.)");
+                    if (ans == "yes")
+                    {
+                        Console.WriteLine("x =");
+                        int x = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("y =");
+                        int y = Convert.ToInt32(Console.ReadLine());
+                        int sum = x - y;
+                        Console.WriteLine("result: {0}", sum);
+                        return sum;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }      
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("what do i do?");
+            Console.WriteLine("type in add, subtract, multiply, or divide to continue. " +
+                "you can also type in exit to leave.");
+            string ans = Console.ReadLine();           
+            if (ans == "add")
+            {
+            Add();
+            }   
+            if (ans == "subtract")
+            {
+              invoke.
+            }
+            // add an if else statement for subtract.
+            //OR DO A SWITCH STATEMENT? FUNKY TIME BABY
+        }
+    }
+}
