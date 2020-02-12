@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//ISSUE: you cant do numbers with fractions. i think its bc the numbers arent floats but i havent checked in all honesty
+//if you put this code into visual studio with the .net framework it should work fine if you wanna mess with it 
 namespace CALCULATORLMAO
 {
     public class Program //make sure you have the else statement for all the shits haha
