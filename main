@@ -10,13 +10,9 @@ namespace CALCULATORLMAO
     {
         public static int result;
         public static string ans;
-
-        public static int Add()
+        public class Addition
         {
-            Console.WriteLine("are you sure?" +
-                 "type in yes to confirm, or type no to exit.");
-            string ans = Console.ReadLine();
-            if (ans == "yes")
+            public static int Add()
             {
                 Console.WriteLine("x =");
                 int x = Convert.ToInt32(Console.ReadLine());
@@ -29,51 +25,81 @@ namespace CALCULATORLMAO
                 result = sum;
                 return result;
             }
-            else
+        }
+        public class Subtraction
+        {
+            public int Subtract() //WHY WONT IT WORK [KILLS MYSELF]
             {
-                return 0;
+                Console.WriteLine("x =");
+                int x = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("y =");
+                int y = Convert.ToInt32(Console.ReadLine());
+                int sum = x - y;
+                Console.WriteLine("result: {0}", sum);
+                return sum;
             }
         }
-            public class subtraction { 
-            public static int Subtract() //WHY WONT IT WORK [KILLS MYSELF]
-                {
-                    Console.WriteLine("are you sure?" +
-                    "type yes to confirm, or type no to exit.)");
-                    if (ans == "yes")
-                    {
-                        Console.WriteLine("x =");
-                        int x = Convert.ToInt32(Console.ReadLine());
-
-                        Console.WriteLine("y =");
-                        int y = Convert.ToInt32(Console.ReadLine());
-                        int sum = x - y;
-                        Console.WriteLine("result: {0}", sum);
-                        return sum;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-            }      
-        static void Main(string[] args)
+        public class Multiplication
         {
-            
-            Console.WriteLine("what do i do?");
-            Console.WriteLine("type in add, subtract, multiply, or divide to continue. " +
-                "you can also type in exit to leave.");
-            string ans = Console.ReadLine();           
-            if (ans == "add")
+            public int Mult()
             {
-            Add();
-            }   
-            if (ans == "subtract")
-            {
-             
+                Console.WriteLine("x =");
+                int x = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("y =");
+                int y = Convert.ToInt32(Console.ReadLine());
+
+                int sum = x * y;
+                Console.WriteLine("result: {0}", sum);
+                return sum;
             }
-            // add an if else statement for subtract.
-            //im not sure why but i cant call subtraction() but i'll keep fucking w/ it in visual studio til it works haha
-            //addition should work as far as i know, it worked last i tested it
+         public class Division
+            {
+                public int Div()
+                {
+                    Console.WriteLine("x =");
+                    int x = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("y =");
+                    int y = Convert.ToInt32(Console.ReadLine());
+
+                    int sum = x / y;
+                    Console.WriteLine("result: {0}", sum);
+                    return sum;
+                }
+            }
+            static void Main(string[] args)
+            {
+
+                Console.WriteLine("what do i do?");
+                Console.WriteLine("type in add, subtract, multiply, or divide to continue. " +
+                    "you can also type in exit to leave."); //not sure why i added this. take it out at some point tbh
+                    //i added all the class ref shits bc i didnt kno any other way to get it to work lmfao
+                string ans = Console.ReadLine();
+                Addition add = new Addition();
+                Subtraction sub = new Subtraction();
+                Multiplication mult = new Multiplication();
+                Division div = new Division();
+                if (ans == "add")
+                {
+                    Addition.Add();
+                }
+                if (ans == "subtract")
+                {
+                    sub.Subtract();
+                }
+                if (ans == "multiply")
+                {
+                    mult.Mult();
+                }
+                if (ans == "divide")
+                {
+                    div.Div();
+                }
+               // i couldve probably used a switch statement instead of lazy if elses but im kind of bad at switch statements and i didnt feel like doing them :/ 
+               //i'll prolly update it later on 
+            }
         }
     }
 }
